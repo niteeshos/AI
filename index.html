@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gesture Magic Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Gesture Magic Studio</h1>
+        <p>Show your hand to the camera and trigger animated effects with gestures.</p>
+      </header>
+
+      <section class="stage">
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="overlay"></canvas>
+        <div class="hud">
+          <p><strong>Gesture:</strong> <span id="gesture">Looking for a hand…</span></p>
+          <p><strong>Mode:</strong> <span id="mode">Idle</span></p>
+        </div>
+      </section>
+
+      <section class="legend">
+        <h2>Gestures</h2>
+        <ul>
+          <li>✋ Open palm → Nebula mode</li>
+          <li>✊ Fist → Pulse mode</li>
+          <li>✌️ Peace sign → Spark mode</li>
+          <li>👍 Thumbs up → Flow mode</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
